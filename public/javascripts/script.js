@@ -1,5 +1,6 @@
 var video = document.querySelector("#video");
-var nav = document.querySelector("#nav");
+var nav = document.querySelectorAll("#nav");
+var disnone = document.getElementsByClassName("disnone");
 
 gsap.delayedCall(36, function() {
     gsap.to('#video', {
@@ -9,6 +10,13 @@ gsap.delayedCall(36, function() {
     });
 });
 
-setTimeout(function(){
-  nav.style.display= "block" 
-},37800)
+
+
+  setTimeout(function(){
+    for (let i = 0; i < nav.length; i++) {
+      nav[i].style.display= "block" 
+    }
+  },37800)  
+
+
+
